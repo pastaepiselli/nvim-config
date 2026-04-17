@@ -17,3 +17,9 @@ vim.keymap.set("n", "<Esc><Esc>", ":nohlsearch<CR>", { desc = "Removes hl"})
 -- oil (apertura cartella da file)
 vim.keymap.set("n", "\\", "<CMD>:Oil<CR>", { desc = "Open oil"})
 
+-- lsp + telescope
+local builtin = require('telescope.builtin')
+
+vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "Telescope: Definizione" })
+vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "Telescope: Riferimenti" })
+
