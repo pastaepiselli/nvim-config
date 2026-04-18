@@ -18,3 +18,12 @@ vim.o.tabstop = 4					-- tab 4 spazi
 -- rimozione status bar base
 vim.o.laststatus = 3
 vim.o.showmode = false
+
+-- errori segnati a sinistra
+-- config globale (fuori da tutto)
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 2,
+    prefix = "●",
+  },
+})
