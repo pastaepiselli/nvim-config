@@ -1,6 +1,10 @@
 return {
 	'm4xshen/autoclose.nvim',
 	config = function()
-			require 'autoclose'.setup() -- settings default 
+			require 'autoclose'.setup({
+				options = {
+					  disabled_filetypes = { "text", "markdown", "norg"},
+				   },
+			}) -- settings default 
 	end
 }

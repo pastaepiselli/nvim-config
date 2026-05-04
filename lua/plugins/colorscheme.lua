@@ -1,12 +1,11 @@
 return {
-	'cormacrelf/vim-colors-github',
-	lazy = false,
-	priority = 1000,
-	opts = {
-	},
-	config = function()
+		"ellisonleao/gruvbox.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {
+  },
+  config = function(_, opts)
 		vim.o.background = "light"
-		vim.cmd[[colorscheme github]]
-	end
-
+    vim.cmd("colorscheme gruvbox")
+  end
 }
