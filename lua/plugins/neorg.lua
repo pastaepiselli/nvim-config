@@ -1,6 +1,7 @@
 return {
 		"nvim-neorg/neorg",
 		lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+		build = ":Neorg sync-parsers",
 		version = "*", -- Pin Neorg to the latest stable release
 		config = function()
 				require("neorg").setup {
@@ -16,7 +17,9 @@ return {
 								["core.dirman"] = {          -- Gestore delle cartelle per le note
 										config = {
 												workspaces = {
-														studio = "~/notes/studio", -- Cambia questo percorso con il tuo
+														studio = "~/notes/studio",
+														notes = "~/dev/notes"
+
 												},
 												default_workspace = "studio",
 										},
